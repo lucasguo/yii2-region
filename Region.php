@@ -51,7 +51,7 @@ class Region extends Widget
             $this->city['options']=ArrayHelper::merge($this->city['options'],[
                 'onchange'=>"
                 if($(this).val()!=''){
-                    $.get('{$this->url}?parent_id='+$(this).val(),function(data){
+                    $.get('{$this->url}&parent_id='+$(this).val(),function(data){
                         $('#{$districtId}').html('{$districtDefault}'+data);
                     })
                 }else{
